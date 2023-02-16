@@ -1,0 +1,73 @@
+body {
+    background-color: rgb(250, 255, 187);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+ 
+h1 {
+    font-size: 110px;
+    color: rgb(30, 230, 200);
+    display: inline;
+}
+
+.ttl {
+    font-size: 40px;
+}
+
+.data {
+    font-size: 80px;
+    margin-left: 0.5em;
+    text-align: left;
+}
+
+.redfont {
+    color: red;
+}
+
+.bluefont {
+    color: blue;
+}
+
+.hidn{
+    visibility: hidden;
+}
+
+.dataContainer{
+    display: flex;
+    box-sizing: border-box;
+    width: 25%;
+    position: relative;
+    border: 5px solid pink;
+}
+
+.outerContainer{
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    border: 5px solid green;
+    height: 15vh;
+}
+
+.bottomButtons{
+    display: flex;
+    box-sizing: border-box;
+    width: 16.67%;
+    position: relative;
+    color: white;
+    background-color: rgb(76, 93, 250);
+    border: 5px solid pink;
+}
+
+.graphContainer{
+    box-sizing: border-box;
+    height: 70vh;
+}
+
+.chartCanvas{
+    background-color: rgb(95, 95, 95);
+    box-sizing: border-box;
+    border: 5px solid purple;
+    padding: 0px;
+    margin: 0px;
+}

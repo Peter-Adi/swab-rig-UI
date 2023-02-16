@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="conn.js"></script>
+    <script defer src="ui.js"></script>
+    <script src="csv.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head> 
+<body>
+    <div class="outerContainer">
+        <div class="dataContainer">
+            <div class="ttl bluefont">Depth : </div>
+            <div class="data" id="depth">1500</div>
+        </div>
+
+        <div class="dataContainer">
+            <div class="ttl redfont">Line Speed : </div>
+            <div class="data" id="lnSpeed">50</div>
+        </div>
+
+        <div class="dataContainer">
+            <div class="ttl">Weight : </div>
+            <div class="data" id="weight">560</div>
+        </div>
+
+        <div class="dataContainer">
+            <div class="ttl redfont">Psi : </div>
+            <div class="data" id="psi">30</div>
+        </div>
+
+    </div>
+
+    <div class="graphContainer">
+        <canvas id="myCanvas" class="chartCanvas" height="746" width="1910"></canvas>
+    </div>
+
+    <div class="outerContainer">
+        <div class="bottomButtons">
+            <div class="ttl">Button: </div>
+            <div class="data" id="depth">1</div>
+        </div>
+
+        <div class="bottomButtons">
+            <div class="ttl">Button: </div>
+            <div class="data" id="depth">2</div>
+        </div>
+
+        <div class="bottomButtons">
+            <div class="ttl">Button: </div>
+            <div class="data" id="depth">3</div>
+        </div>
+
+        <div class="bottomButtons">
+            <div class="ttl">Button: </div>
+            <div class="data" id="depth">4</div>
+        </div>
+
+        <div class="bottomButtons">
+            <div class="ttl">Button: </div>
+            <div class="data" id="depth">5</div>
+        </div>
+
+        <div class="bottomButtons">
+            <div class="ttl">Button: </div>
+            <div class="data" id="depth">6</div>
+        </div>
+
+    </div>
+
+
+
+    <div class="hidn">
+        <button onclick="connectSerial()">Connect</button>
+
+        Baud:
+        <input type="text" id="baud" list="baudList" style="width: 10ch;" onclick="this.value = ''" onchange="localStorage.baud = this.value">
+        <datalist id="baudList">
+            <option value="110">110</option>
+            <option value="300">300</option>
+            <option value="600">600</option>
+            <option value="1200">1200</option>
+            <option value="2400">2400</option>
+            <option value="4800">4800</option>
+            <option value="9600">9600</option>
+            <option value="14400">14400</option>
+            <option value="19200">19200</option>
+            <option value="38400">38400</option>
+            <option value="57600">57600</option>
+            <option value="115200">115200</option>
+            <option value="128000">128000</option>
+            <option value="256000">256000</option>
+        </datalist>
+        <button onclick="serialResults.innerHTML = '';">Clear</button>
+    </div>
+
+
+</body>
+</html>
